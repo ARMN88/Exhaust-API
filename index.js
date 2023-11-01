@@ -81,9 +81,9 @@ async function oilCatchCanScrape(isFirst = false) {
 
   const $ = cheerio.load(data);
 
-  const container = $('#ProductPrice');
+  const container = $('#display_price_bottom');
 
-  const newPrice = parseFloat($(container).find('.money').text().substring(1));
+  const newPrice = parseFloat($(container).find('.sp-newPrice').text().substring(1));
 
   if (newPrice < oilCatchCanPrice) {
     if (!isFirst) {
