@@ -48,7 +48,7 @@ async function downpipeScrape(isFirst = false) {
       await transporter.sendMail({
         from: `Downpipe Bot" <${process.env.EMAIL}>`,
         to: '7087013449@vtext.com',
-        text: `Downpipe was $${downpipePrice}, now $${newPrice}!`,
+        text: `Downpipe was $${downpipePrice}, now $${newPrice}!\n${downpipeURL}`,
       });
     }
     downpipePrice = newPrice;
@@ -69,7 +69,7 @@ async function wingScrape(isFirst = false) {
       await transporter.sendMail({
         from: `Wing Bot" <${process.env.EMAIL}>`,
         to: '7087013449@vtext.com',
-        text: `Wing was $${wingPrice}, now $${newPrice}!`,
+        text: `Wing was $${wingPrice}, now $${newPrice}!\n${wingURL}`,
       });
     }
     wingPrice = newPrice;
@@ -90,7 +90,7 @@ async function oilCatchCanScrape(isFirst = false) {
       await transporter.sendMail({
         from: `Oil Catch Can Bot" <${process.env.EMAIL}>`,
         to: '7087013449@vtext.com',
-        text: `Oil Catch Can was $${oilCatchCanPrice}, now $${newPrice}!`,
+        text: `Oil Catch Can was $${oilCatchCanPrice}, now $${newPrice}!\n${oilCatchCanURL}`,
       });
     }
     oilCatchCanPrice = newPrice;
