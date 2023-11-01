@@ -17,13 +17,13 @@ let downpipePrice = 1000;
 let wingPrice = 1000;
 let oilCatchCanPrice = 1000;
 
-const downpipeUrl =
+const downpipeURL =
   'https://www.amsperformance.com/product/infiniti-q60-q50-vr30ddtt-red-alpha-lower-downpipes/';
 
-const wingUrl =
+const wingURL =
   'https://jaliscoscarbonfiber.com/products/infiniti-q50-q60-m-style-carbon-fiber-spoiler?variant=41071722823880';
 
-const oilCatchCanUrl =
+const oilCatchCanURL =
   'https://www.z1motorsports.com/z1-products/z1-motorsports/z1-q50-q60-30t-baffled-oil-catch-can-kit-p-23546.html';
 
 const handle = setInterval(function () {
@@ -33,7 +33,7 @@ const handle = setInterval(function () {
 }, 1000 * 60);
 
 async function downpipeScrape(isFirst = false) {
-  const { data } = await axios.get(downpipeUrl);
+  const { data } = await axios.get(downpipeURL);
 
   const $ = cheerio.load(data);
 
@@ -56,7 +56,7 @@ async function downpipeScrape(isFirst = false) {
 }
 
 async function wingScrape(isFirst = false) {
-  const { data } = await axios.get(wingUrl);
+  const { data } = await axios.get(wingURL);
 
   const $ = cheerio.load(data);
 
@@ -77,7 +77,7 @@ async function wingScrape(isFirst = false) {
 }
 
 async function oilCatchCanScrape(isFirst = false) {
-  const { data } = await axios.get(wingUrl);
+  const { data } = await axios.get(oilCatchCanURL);
 
   const $ = cheerio.load(data);
 
